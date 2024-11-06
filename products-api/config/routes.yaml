@@ -1,0 +1,26 @@
+books:
+    path: '/api/products'
+    controller: 'App\Controller\ProductController::index'
+    methods: ['GET']
+
+book_show:
+    path: '/api/products/{id}'
+    controller: 'App\Controller\ProductController::show'
+    methods: ['GET']
+    requirements:
+        id: \d+
+
+book_create:
+    path: '/api/products/new'
+    controller: 'App\Controller\ProductController::create'
+    methods: ['POST']
+
+book_edit:
+    path: '/api/products/{id}/edit'
+    controller: 'App\Controller\ProductController::edit'
+    methods: ['PUT']
+
+book_delete:
+    path: '/api/products/{id}'
+    controller: 'App\Controller\ProductController::delete'
+    methods: ['DELETE']
